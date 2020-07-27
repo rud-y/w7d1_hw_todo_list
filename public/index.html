@@ -12,6 +12,19 @@
 <body>
   
   <div id="app">
+      <h2>TO-DO's</h2>
+      <form v-on:submit.prevent="addNewItem">
+        <input id="new-todo" type="text" v-model="newItem" required/>
+        <input type="submit" value="Save item"/>
+      </form>
+
+      <li v-for="item in todos">
+          <span>{{item}}</span>
+
+      </li>
+
+
+
     
 
   </div>
