@@ -14,19 +14,18 @@
   <div id="app">
       <h2>TO-DO's</h2>
       <form v-on:submit.prevent="addNewItem">
+        <label for="new-todo">Add to list:</label><br/>
         <input id="new-todo" type="text" v-model="newItem" required/>
+        <label for="priority1">High</label><input type="radio" id="priority1" name="priority" value="High" v-model="picked"/>
+        <label for="priority1">Low</label><input type="radio" id="priority2" name="priority" value="Low" v-model="picked"/>
         <input type="submit" value="Save item"/>
       </form>
 
-      <li v-for="item in todos">
-          <span>{{item}}</span>
-
+      <li v-for="(task, index) in todos" v-bind:class="task.priority ? 'high-priority' : 'low-priority'">
+          <span>{{task.name}}</span>
+          <button id="priority-right" v-if="!task.priority" v-on:click="setHigh(index)">Set high priority</button>
       </li>
+    </div>
 
-
-
-    
-
-  </div>
 </body>
 </html>
