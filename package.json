@@ -1,0 +1,28 @@
+{
+  "name": "hw_todo_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rud-y/w7d1_hw_todo_list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rud-y/w7d1_hw_todo_list/issues"
+  },
+  "homepage": "https://github.com/rud-y/w7d1_hw_todo_list#readme",
+  "devDependencies": {
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
